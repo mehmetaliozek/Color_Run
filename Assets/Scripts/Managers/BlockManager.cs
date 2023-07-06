@@ -18,14 +18,7 @@ public class BlockManager : MonoBehaviour
         if (currentSpawnTime <= 0)
         {
             Instantiate(block, transform.position, Quaternion.identity);
-            if (int.Parse(Player.instance.score.text) % 25 == 0)
-            {
-                Physics.gravity += new Vector3(0, -0.5f, 0);
-                if (spawnTime != 1f)
-                {
-                    spawnTime -= 0.25f;
-                }
-            }
+            Player.instance.UpdateSpawnTime(ref spawnTime);
             currentSpawnTime = spawnTime;
         }
     }
