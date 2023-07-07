@@ -13,7 +13,7 @@ public class UiManager : MonoBehaviour
         pauseMenu.SetActive(Time.timeScale == 1 ? false : true);
     }
 
-    public void Restart()
+    public void Play()
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
@@ -22,5 +22,10 @@ public class UiManager : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
