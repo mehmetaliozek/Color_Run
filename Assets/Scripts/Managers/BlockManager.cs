@@ -18,8 +18,8 @@ public class BlockManager : MonoBehaviour
         if (currentSpawnTime <= 0)
         {
             Instantiate(block, transform.position, Quaternion.identity);
-            Player.instance.UpdateSpawnTime(ref spawnTime);
             currentSpawnTime = spawnTime;
         }
+        GameManager.instance.UpdateSpawnTime(ref spawnTime);
     }
 }

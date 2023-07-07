@@ -13,11 +13,14 @@ public class UiManager : MonoBehaviour
         pauseMenu.SetActive(Time.timeScale == 1 ? false : true);
     }
 
-    public void Restart(){
+    public void Restart()
+    {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1;
     }
 
-    public void Exit(){
+    public void Exit()
+    {
         SceneManager.LoadScene(0);
     }
 }
