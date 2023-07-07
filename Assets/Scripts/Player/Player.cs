@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Block")
         {
             Block block = other.gameObject.GetComponent<Block>();
+            AudioManager.instance.BlockBreakPlay();
             if (block.material == gameObject.GetComponent<MeshRenderer>().sharedMaterial)
             {
                 block.animator.speed = 1;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
             {
                 loseMenu.SetActive(true);
                 Time.timeScale = 0;
+                GameManager.instance.SetHighScore();
                 Destroy(gameObject);
             }
         }

@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        highScore = GetHighScore();
+        highScoreText.text = highScore.ToString();
     }
 
     private void Update()
@@ -68,4 +70,9 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    private float GetHighScore() => PlayerPrefs.GetFloat("highScore");
+
+
+    public void SetHighScore() => PlayerPrefs.SetFloat("highScore", highScore);
 }

@@ -19,9 +19,5 @@ public class Block : MonoBehaviour
         blockLeft.GetComponent<Renderer>().material = material;
         blockRight.GetComponent<Renderer>().material = material;
     }
-
-    public void Break()
-    {
-        Destroy(gameObject);
-    }
+    public void Break() => Destroy(gameObject);
 }
