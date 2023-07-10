@@ -6,6 +6,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
 
+    [SerializeField] private GameObject audioOn;
+
     public void PauseAndResume()
     {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
@@ -22,10 +24,17 @@ public class UiManager : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void AudioVolume(float volume)
+    {
+        AudioManager.instance.SetVolume(volume);
+        audioOn.SetActive(volume == 0 ? false : true);
     }
 }

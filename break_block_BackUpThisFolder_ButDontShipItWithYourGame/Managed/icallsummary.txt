@@ -176,6 +176,7 @@ UnityEngine.AsyncOperation::InternalDestroy
 UnityEngine.AudioSettings::StartAudioOutput
 UnityEngine.AudioSettings::StopAudioOutput
 UnityEngine.AudioSource::PlayHelper
+UnityEngine.AudioSource::set_volume
 UnityEngine.Behaviour::get_enabled
 UnityEngine.Behaviour::get_isActiveAndEnabled
 UnityEngine.Behaviour::set_enabled
@@ -533,6 +534,7 @@ UnityEngine.Object::GetName
 UnityEngine.Object::ToString
 UnityEngine.Object::Destroy
 UnityEngine.Object::DestroyImmediate
+UnityEngine.Object::DontDestroyOnLoad
 UnityEngine.Object::SetName
 UnityEngine.Object::set_hideFlags
 UnityEngine.Object::get_hideFlags

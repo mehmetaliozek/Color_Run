@@ -19,7 +19,7 @@ public class BlockManager : MonoBehaviour
         {
             Instantiate(block, transform.position, Quaternion.identity);
             currentSpawnTime = spawnTime;
+            GameManager.instance.UpdateSpawnTime(ref spawnTime);
         }
-        GameManager.instance.UpdateSpawnTime(ref spawnTime);
     }
 }

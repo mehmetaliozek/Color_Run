@@ -40228,8 +40228,10 @@ struct AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35  : public AudioBe
 // AudioManager
 struct AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.AudioSource AudioManager::music
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___music_5;
 	// UnityEngine.AudioSource AudioManager::blockBreak
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___blockBreak_5;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___blockBreak_6;
 };
 
 // UnityEngine.AudioSource
@@ -40323,14 +40325,16 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___highScoreText_5;
 	// TMPro.TextMeshProUGUI GameManager::scoreText
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___scoreText_6;
+	// System.Single GameManager::triggerScore
+	float ___triggerScore_7;
 	// System.Single GameManager::highScore
-	float ___highScore_7;
+	float ___highScore_8;
 	// System.Single GameManager::score
-	float ___score_8;
+	float ___score_9;
 	// System.Single GameManager::scoreTime
-	float ___scoreTime_9;
+	float ___scoreTime_10;
 	// System.Single GameManager::currentScoreTime
-	float ___currentScoreTime_10;
+	float ___currentScoreTime_11;
 };
 
 // UnityEngine.UIElements.Label
@@ -40615,6 +40619,8 @@ struct UiManager_tD893C8D36318160D6F63738C3B33FE3C22D9688F  : public MonoBehavio
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pauseButton_4;
 	// UnityEngine.GameObject UiManager::pauseMenu
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pauseMenu_5;
+	// UnityEngine.GameObject UiManager::audioOn
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___audioOn_6;
 };
 
 // UnityEngine.UI.Dropdown/DropdownItem

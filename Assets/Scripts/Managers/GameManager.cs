@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private TextMeshProUGUI scoreText;
 
+    private float triggerScore;
     private float highScore;
     private float score;
 
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (Player.instance.isTrigger)
         {
             UpdateScore(100);
+            triggerScore += 100;
             Player.instance.isTrigger = false;
         }
         UpdateHighScore();
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateSpawnTime(ref float spawnTime)
     {
-        if (score % 1000 == 0)
+        if (triggerScore % 500 == 0)
         {
             Physics.gravity += new Vector3(0, -0.5f, 0);
             if (spawnTime > 1f)
@@ -72,7 +74,6 @@ public class GameManager : MonoBehaviour
     }
 
     private float GetHighScore() => PlayerPrefs.GetFloat("highScore");
-
 
     public void SetHighScore() => PlayerPrefs.SetFloat("highScore", highScore);
 }
